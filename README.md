@@ -52,14 +52,13 @@ Na REST API teremos um CRUD com os seguintes endpoints:
  - `GET /products/:code`: Obter a informação somente de um produto da base de dados
  - `GET /products`: Listar todos os produtos da base de dados, adicionar sistema de paginação para não sobrecarregar o `REQUEST`.
 
-Ao terminar os endpoints, configurar os testes usando Pytest ou algum de sua preferência.
-
 ## Extras
 
 - **Diferencial 1** Front End con VueJs, configurar um projeto web para listar os produtos cadastrados na REST API.
 - **Diferencial 2** Configurar Docker no Projeto para facilitar o Deploy da equipe de DevOps;
 - **Diferencial 3** Configurar um sistema de alerta se tem algum falho durante o Sync dos produtos;
 - **Diferencial 4** Descrever a documentação da API utilizando o conceito de Open API 3.0;
+- **Diferencial 5** Escrever Unit Tests para os endpoints  GET e PUT do CRUD;
 
 
 ## Readme do Repositório
