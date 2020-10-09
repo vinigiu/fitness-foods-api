@@ -54,7 +54,7 @@ Na REST API teremos um CRUD com os seguintes endpoints:
 
 ## Extras
 
-- **Diferencial 1** Front End con VueJs, configurar um projeto web para listar os produtos cadastrados na REST API.
+- **Diferencial 1** Front End, configurar um projeto web com para listar os produtos cadastrados na REST API.
 - **Diferencial 2** Configurar Docker no Projeto para facilitar o Deploy da equipe de DevOps;
 - **Diferencial 3** Configurar um sistema de alerta se tem algum falho durante o Sync dos produtos;
 - **Diferencial 4** Descrever a documentação da API utilizando o conceito de Open API 3.0;
