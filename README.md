@@ -1,4 +1,4 @@
-# DotNet Challenge 20200902
+# Backend Challenge 20230105
 
 ## Introdução
 
@@ -6,17 +6,17 @@ Nesse desafio trabalharemos no desenvolvimento de uma REST API para utilizar os 
 
 O projeto tem como objetivo dar suporte a equipe de nutricionistas da empresa Fitness Foods LC para que eles possam revisar de maneira rápida a informação nutricional dos alimentos que os usuários publicam pela aplicação móvel.
 
-### Instruções iniciais obrigatórias
-
-- Utilizar o seu github pessoal para publicar o desafio. Confirme que a visibilidade do projeto é pública (não esqueça de colocar no readme a referência a este challenge);
-- O projeto back-end deverá ser desenvolvido usando em C#
-- Documentação para configuração do projeto em ambientes de produção (como instalar, rodar e referências a libs usadas);
+### Antes de começar
  
+- Prepare o projeto para ser disponibilizado no Github, copiando o conteúdo deste repositório para o seu (ou utilize o fork do projeto e aponte para o Github). Confirme que a visibilidade do projeto é pública (não esqueça de colocar no readme a referência a este challenge);
+- O projeto deve utilizar a Linguagem específica na sua Vaga (caso esteja se candidatando). Por exempo: Python, R, Scala e entre outras;
+- Considere como deadline 5 dias a partir do início do desafio. Caso tenha sido convidado a realizar o teste e não seja possível concluir dentro deste período, avise a pessoa que o convidou para receber instruções sobre o que fazer.
+- Documentar todo o processo de investigação para o desenvolvimento da atividade (README.md no seu repositório); os resultados destas tarefas são tão importantes do que o seu processo de pensamento e decisões à medida que as completa, por isso tente documentar e apresentar os seus hipóteses e decisões na medida do possível.
 
 ## O projeto
  
 - Criar um banco de dados MongoDB usando Atlas: https://www.mongodb.com/cloud/atlas ou algum Banco de Dados SQL se não sentir confortável com NoSQL;
-- Criar uma REST API usando C# com as melhores práticas de desenvolvimento, Design Patterns, SOLID e DDD.
+- Criar uma REST API com as melhores práticas de desenvolvimento, Design Patterns, SOLID e DDD.
 - Integrar a API com o banco de dados criado para persistir os dados
 - Recomendável usar Drivers oficiais para integração com o DB
 - Desenvolver Testes Unitários
@@ -58,7 +58,7 @@ Na REST API teremos um CRUD com os seguintes endpoints:
 
 ## Extras
 
-- **Diferencial 1** Front End, configurar um projeto web com para listar os produtos cadastrados na REST API.
+- **Diferencial 1** Configuração de um endpoint de busca com Elastic Search ou similares;
 - **Diferencial 2** Configurar Docker no Projeto para facilitar o Deploy da equipe de DevOps;
 - **Diferencial 3** Configurar um sistema de alerta se tem algum falho durante o Sync dos produtos;
 - **Diferencial 4** Descrever a documentação da API utilizando o conceito de Open API 3.0;
@@ -66,32 +66,39 @@ Na REST API teremos um CRUD com os seguintes endpoints:
 - **Diferencial 6** Escrever um esquema de segurança utilizando `API KEY` nos endpoints. Ref: https://learning.postman.com/docs/sending-requests/authorization/#api-key
 
 
+
 ## Readme do Repositório
- 
-- Deve conter o título de cada projeto
-- Uma descrição de uma frase
+
+- Deve conter o título do projeto
+- Uma descrição sobre o projeto em frase
+- Deve conter uma lista com linguagem, framework e/ou tecnologias usadas
 - Como instalar e usar o projeto (instruções)
 - Não esqueça o [.gitignore](https://www.toptal.com/developers/gitignore)
- 
-## Finalização 
+- Se está usando github pessoal, referencie que é um challenge by coodesh:  
 
-Avisar sobre a finalização e enviar para correção em: [https://coodesh.com/review-challenge](https://coodesh.com/review-challenge) 
-Após essa etapa será marcado a apresentação/correção do projeto.
+>  This is a challenge by [Coodesh](https://coodesh.com/)
 
-## Instruções para a Apresentação: 
+## Finalização e Instruções para a Apresentação
 
-1. Será necessário compartilhar a tela durante a vídeo chamada;
-2. Deixe todos os projetos de solução previamente abertos em seu computador antes de iniciar a chamada;
-3. Deixe os ambientes configurados e prontos para rodar; 
-4. Prepara-se pois você será questionado sobre cada etapa e decisão do Challenge;
-5. Prepare uma lista de perguntas, dúvidas, sugestões de melhorias e feedbacks (caso tenha).
+Avisar sobre a finalização e enviar para correção.
 
+1. Confira se você respondeu o Scorecard anexado na Vaga que se candidatou;
+2. Confira se você respondeu o Mapeamento anexado na Vaga que se candidatou;
+3. Acesse [https://coodesh.com/challenges/review](https://coodesh.com/challenges/review);
+4. Adicione o repositório com a sua solução;
+5. Grave um vídeo, utilizando o botão na tela de solicitar revisão da Coodesh, com no máximo 5 minutos, com a apresentação do seu projeto. Utilize o tempo para:
+- Explicar o objetivo do desafio
+- Quais tecnologias foram utilizadas
+- Mostrar a aplicação em funcionamento
+- Foque em pontos obrigatórios e diferenciais quando for apresentar.
+6. Adicione o link da apresentação do seu projeto no README.md.
+7. Verifique se o Readme está bom e faça o commit final em seu repositório;
+8. Confira a vaga desejada;
+9. Envie e aguarde as instruções para seguir no processo. Sucesso e boa sorte. =)
 
 ## Suporte
 
-Use a [nossa comunidade](https://coodesh.com/desenvolvedores#community) para tirar dúvidas sobre o processo ou envie um e-mail para contato@coodesh.com.
-
-
+Use a [nossa comunidade](https://coodesh.com/desenvolvedores#community) para tirar dúvidas sobre o processo
 
 
 
