@@ -1,4 +1,4 @@
-# Backend Challenge 20230105
+# FITNESS FOODS API
 
 Este projeto foi desenvolvido como parte do desafio de Backend da Coodesh.
 
