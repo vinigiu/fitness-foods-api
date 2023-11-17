@@ -4,7 +4,7 @@
 
 - [X] Criação de repositório GitHub
 - [X] Criação do plano de ação
-- [ ] Configuração do ambiente de desenvolvimento (Stack escolhida)
+- [X] Configuração do ambiente de desenvolvimento (Stack escolhida)
 
 ## Criação de Database
 
