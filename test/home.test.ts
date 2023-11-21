@@ -1,5 +1,6 @@
 import * as supertest from "supertest";
-import { default as app } from "../src/server";
+import app from "../src/server/app";
+
 const request = supertest("localhost:3000");
 
 describe("GET /", () => {
