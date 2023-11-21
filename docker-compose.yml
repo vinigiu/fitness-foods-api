@@ -10,7 +10,7 @@ services:
       - "3000:3000"
     volumes:
       - .:/app 
-    command: npm run dev
+    command: npm run start
     env_file:
       - ./.env
     environment:
