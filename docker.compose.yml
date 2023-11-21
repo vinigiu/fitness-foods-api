@@ -1,0 +1,19 @@
+version: '3'
+services:
+  fitness-food:
+    build:
+      dockerfile: ./docker.Dockerfile
+      context: .
+    image: vinigiu/fitness-foods-api
+    container_name: fitness-foods-api
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app 
+    command: npm run dev
+    env_file:
+      - ./.env
+    environment:
+      - MONGODB_URI=${MONGODB_URI}
+      - SESSION_SECRET=${SESSION_SECRET}
+      - OPEN_FOODS_API=${OPEN_FOODS_API}
