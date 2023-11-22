@@ -70,7 +70,7 @@
               "in": "path",
               "required": true,
               "type": "string",
-              "description": "código do produto a ser buscado. Possui 13 digitos."
+              "description": "código do produto a ser buscado. Possui 8 digitos."
             }
           ]
         },
@@ -101,7 +101,7 @@
               "in": "path",
               "required": true,
               "type": "string",
-              "description": "código do produto a ser excluído. Possui 13 digitos."
+              "description": "código do produto a ser excluído. Possui 8 digitos."
             }
           ]
         },
@@ -125,7 +125,7 @@
               "in": "path",
               "required": true,
               "type": "string",
-              "description": "código do produto a ser excluído. Possui 13 digitos."
+              "description": "código do produto a ser excluído. Possui 8 digitos."
             }
           ]
         }

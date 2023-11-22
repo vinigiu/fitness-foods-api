@@ -20,24 +20,24 @@ Para obter mais informações sobre o desafio, consulte [Desafio-Coodesh](https:
 > Para que as requisições aos endpoints seja autorizadas é necessário incluir no Header da requisição uma API Key válida em Authorizations. Para finalidade de teste, você pode obter o valor de uma API Key válida em `src\data\apikeys.json`
 
 ### GET ```/products```
-Lista todos os produtos cadastrados no banco de dados. Inclui paginação com limite 100 produtos por página. Exemplo ```GET /products?page=2```   
+Lista todos os produtos cadastrados no banco de dados. Inclui paginação com limite 100 produtos por página. Exemplo ```GET /products?page=1```   
 #### Parâmetros 
 page - paginação
 
 ### GET ```/products/:code```
-Lista um produto cadastrado cujo código corresponde ao passado como parâmetro. Exemplo: ```GET /products/8718215180180```   
+Lista um produto cadastrado cujo código corresponde ao passado como parâmetro. Exemplo: ```GET /products/20221126```   
 #### Parâmetros   
-code - código do produto a ser buscado. Possui 13 digitos.   
+code - código do produto a ser buscado. Possui 8 digitos.   
 
 ### PUT ```/products/:code```
-Edita um produto cadastrado cujo código corresponde ao passado como parâmetro. Exemplo: ```PUT /products/8718215380313```   
+Edita um produto cadastrado cujo código corresponde ao passado como parâmetro. Exemplo: ```PUT /products/20221126```   
 #### Parâmetros   
-code - código do produto a ser buscado. Possui 13 digitos. 
+code - código do produto a ser buscado. Possui 8 digitos. 
 
 ### DELETE ```/products/:code```
-Exclui (altera seu status para `trash`) um produto cadastrado cujo código corresponde ao passado como parâmetro. Exemplo ```DELETE /products/8718215180173```   
+Exclui (altera seu status para `trash`) um produto cadastrado cujo código corresponde ao passado como parâmetro. Exemplo ```DELETE /products/20221126```   
 #### Parâmetros   
-code - código do produto a ser excluído. Possui 13 digitos. 
+code - código do produto a ser excluído. Possui 8 digitos. 
 
 ## Stack utilizada:
 
