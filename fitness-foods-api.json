@@ -25,6 +25,10 @@
                   }
                 }
               }
+            },
+            "401": {
+              "description": "Unauthorized",
+              "content": "Unauthorized"
             }
           },
           "parameters": [
@@ -51,6 +55,10 @@
                   }
                 }
               }
+            },
+            "401": {
+              "description": "Unauthorized",
+              "content": "Unauthorized"
             },
             "404": {
               "description": "Not Found"
@@ -79,6 +87,10 @@
                 }
               }
             },
+            "401": {
+              "description": "Unauthorized",
+              "content": "Unauthorized"
+            },
             "404": {
               "description": "Not Found"
             }
@@ -98,6 +110,10 @@
           "responses": {
             "200": {
               "description": "OK"
+            },
+            "401": {
+              "description": "Unauthorized",
+              "content": "Unauthorized"
             },
             "404": {
               "description": "Not Found"
