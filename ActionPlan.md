@@ -27,7 +27,7 @@
     - `GET /products`: Listar todos os produtos da base de dados, adicionar sistema de paginação para não sobrecarregar o `REQUEST`.
 - [X] Criação dos Controllers e Services para realização de cada operação CRUD
 - [ ] Criação dos Unit Tests
-- [ ] Criação do esquema de seguração utilizando `API KEY`
+- [ ] Criação do esquema de segurança utilizando `API KEY`
 - [X] Criação do Cron Job
 - [ ] Configuração do Cron Job para obter os dados da API do Open Foods e tratar para inserir no DB
 
@@ -49,12 +49,3 @@
 - Passo 5: Foi criado o modulo de serviço do CronJob que irá realizar a busca dos dados na API da Open Food Facts. A princípio, foram criadas as funções das tarefas necessárias, sem que estas ainda realizem completamente seus objetivos, a título de verificação do funcionamento do Job. Para teste, o Job foi configurado para ocorrer a cada minuto. No entanto, quando as funções do Job foram ajustadas, a configuração foi alterada para que ocorra diariamente às 23h (horário em que, provavelmente, o tráfego da aplciação será mínimo)
 
 - Passo 6: Foram criados os arquivos Dockerfile e dokcer-compose.yml para configuração do Docker. Esta foi minha primeira experiência configurando um container Docker (minhas experiêcnias prévias com Docker envolveram apenas a montagem do container e imagem de um projeto já existente e previamente configurado), fazendo necessária a pesquisa em documentação para o entendimento de como realizar estas configurações.
-
-## Stack utilizada:
-
-- Linguagem: Typescript
-- Servidor: NodeJs com framework Express
-- Banco de dados (NoSQL): MongoDB com Atlas
-- Agendador de tarefas automáticas: NodeCron
-- Versionamento de código: Git
-- Repositório de código: GitHub
