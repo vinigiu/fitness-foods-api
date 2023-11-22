@@ -101,7 +101,7 @@ const productService = {
 
       console.log(code)
   
-      deleted = await collection.deleteOne({ code: codeToNumber });
+      deleted = await collection.updateOne({ code: codeToNumber }, { $set: { status: "trash" }});
       
       if (!deleted) {
         console.log(`Unnable to delete product with this code`)

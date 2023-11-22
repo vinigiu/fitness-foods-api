@@ -33,7 +33,7 @@ Edita um produto cadastrado cujo código corresponde ao passado como parâmetro.
 code - código do produto a ser buscado. Possui 13 digitos. 
 
 ### DELETE ```/products/:code```
-Exclui um produto cadastrado cujo código corresponde ao passado como parâmetro. Exemplo ```DELETE /products/8718215180173```   
+Exclui (altera seu status para `trash`) um produto cadastrado cujo código corresponde ao passado como parâmetro. Exemplo ```DELETE /products/8718215180173```   
 #### Parâmetros   
 code - código do produto a ser excluído. Possui 13 digitos. 
 

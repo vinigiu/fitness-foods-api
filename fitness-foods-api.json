@@ -1,0 +1,225 @@
+{
+    "info": {
+      "title": "Fitness Foods Api",
+      "version": "1.0.0",
+      "description": "Esta API tem como objetivo dar suporte a equipe de nutricionistas da empresa Fitness Foods LC para que eles possam revisar de maneira rápida a informação nutricional dos alimentos que os usuários publicam pela aplicação móvel.",
+      "contact": {
+        "name": "Vinícius Giuseppe",
+        "email": "vinigiu@hotmail.com"
+      }
+    },
+    "paths": {
+      "/products": {
+        "get": {
+          "description": "Lista todos os produtos cadastrados no banco de dados. Inclui paginação com limite 100 produtos por página.",
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/Product"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "parameters": [
+            {
+              "name": "page",
+              "in": "query",
+              "type": "integer",
+              "description": "paginação",
+              "default": 1
+            }
+          ]
+        }
+      },
+      "/products/:code": {
+        "get": {
+          "description": "Lista um produto cadastrado cujo código corresponde ao passado como parâmetro.",
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Product"
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "Not Found"
+            }
+          },
+          "parameters": [
+            {
+              "name": "code",
+              "in": "path",
+              "required": true,
+              "type": "string",
+              "description": "código do produto a ser buscado. Possui 13 digitos."
+            }
+          ]
+        },
+        "put": {
+          "description": "Edita um produto cadastrado cujo código corresponde ao passado como parâmetro.",
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Product"
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "Not Found"
+            }
+          },
+          "parameters": [
+            {
+              "name": "code",
+              "in": "path",
+              "required": true,
+              "type": "string",
+              "description": "código do produto a ser excluído. Possui 13 digitos."
+            }
+          ]
+        },
+        "delete": {
+          "description": "Exclui (altera seu status para `trash`) um produto cadastrado cujo código corresponde ao passado como parâmetro.",
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "404": {
+              "description": "Not Found"
+            }
+          },
+          "parameters": [
+            {
+              "name": "code",
+              "in": "path",
+              "required": true,
+              "type": "string",
+              "description": "código do produto a ser excluído. Possui 13 digitos."
+            }
+          ]
+        }
+      }
+    },
+    "components": {
+      "schemas": {
+        "Product": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "description": "Unique identifier for the product"
+            },
+            "code": {
+              "type": "integer",
+              "description": "Product code"
+            },
+            "status": {
+              "type": "string",
+              "description": "Product status (e.g., active, inactive)"
+            },
+            "imported_t": {
+              "type": "string",
+              "format": "date-time",
+              "description": "Timestamp when the product was imported into the system"
+            },
+            "url": {
+              "type": "string",
+              "description": "URL of the product's page on the source website"
+            },
+            "creator": {
+              "type": "string",
+              "description": "Username of the user who created the product record"
+            },
+            "created_t": {
+              "type": "integer",
+              "description": "Timestamp when the product record was created"
+            },
+            "last_modified_t": {
+              "type": "integer",
+              "description": "Timestamp when the product record was last modified"
+            },
+            "product_name": {
+              "type": "string",
+              "description": "Name of the product"
+            },
+            "quantity": {
+              "type": "string",
+              "description": "Quantity of the product"
+            },
+            "brands": {
+              "type": "string",
+              "description": "List of brands associated with the product"
+            },
+            "categories": {
+              "type": "string",
+              "description": "List of categories to which the product belongs"
+            },
+            "labels": {
+              "type": "string",
+              "description": "List of labels or tags associated with the product"
+            },
+            "cities": {
+              "type": "string",
+              "description": "List of cities where the product is available"
+            },
+            "purchase_places": {
+              "type": "string",
+              "description": "List of places where the product can be purchased"
+            },
+            "stores": {
+              "type": "string",
+              "description": "List of stores that sell the product"
+            },
+            "ingredients_text": {
+              "type": "string",
+              "description": "Textual description of the product's ingredients"
+            },
+            "traces": {
+              "type": "string",
+              "description": "Information about traces or allergens in the product"
+            },
+            "serving_size": {
+              "type": "string",
+              "description": "Serving size of the product"
+            },
+            "serving_quantity": {
+              "type": "integer",
+              "description": "Quantity per serving"
+            },
+            "nutriscore_score": {
+              "type": "integer",
+              "description": "NutriScore score of the product"
+            },
+            "nutriscore_grade": {
+              "type": "string",
+              "description": "NutriScore grade of the product"
+            },
+            "main_category": {
+              "type": "string",
+              "description": "Main category of the product"
+            },
+            "image_url": {
+              "type": "string",
+              "description": "URL of the product's image"
+            }
+          }
+        }
+      }
+    }
+  }
+  
