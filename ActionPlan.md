@@ -27,9 +27,10 @@
     - `GET /products`: Listar todos os produtos da base de dados, adicionar sistema de paginação para não sobrecarregar o `REQUEST`.
 - [X] Criação dos Controllers e Services para realização de cada operação CRUD
 - [ ] Criação dos Unit Tests
-- [ ] Criação do esquema de segurança utilizando `API KEY`
+- [X] Criação do esquema de segurança utilizando `API KEY`
 - [X] Criação do Cron Job
 - [ ] Configuração do Cron Job para obter os dados da API do Open Foods e tratar para inserir no DB
+- [X] Criação da documentação seguindo o conceito Open API 3.0 disponível em: [fitness-foods-api.json](https://github.com/vinigiu/fitness-foods-api/blob/master/fitness-foods-api.json)
 
 ## Configuração do Docker
 - [X] Criação do arquivo Dockerfile
