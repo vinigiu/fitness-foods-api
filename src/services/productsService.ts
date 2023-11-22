@@ -1,5 +1,4 @@
 require('dotenv').config();
-import { IProduct, ProductModel }  from '../models/Products';
 import { MongoClient } from 'mongodb';
 
 const client = new MongoClient(process.env.MONGODB_URI);
@@ -8,15 +7,18 @@ const database = client.db('fitness-foods');
 const collection = database.collection('products');
 
 const productService = {
-  getAllProducts: async (): Promise<any[]> => {
+  getAllProducts: async (page: number): Promise<any[]> => {
     await client.connect();
     
     let products;
     
     try {
       await client.connect();
+
+      const skip = (page - 1) * 100;
+      const limit = 100;
   
-      products = await collection.find({}).toArray();
+      products = await collection.find({}).skip(skip).limit(limit).toArray();
   
       console.log(products);
     } finally {

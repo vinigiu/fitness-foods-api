@@ -18,10 +18,7 @@ Para obter mais informações sobre o desafio, consulte [Desafio-Coodesh](https:
 ## Endpoints
 
 ### GET ```/products```
-Lista todos os produtos cadastrados no banco de dados. Inclui paginação com limite padrão de 10 produtos. Exemplo ```GET /products?limit=100&page=2```   
-#### Parâmetros
-limit - limite de produtos na resposta   
-page - paginação   
+Lista todos os produtos cadastrados no banco de dados. Exemplo ```GET /products``` 
 
 ### GET ```/products/:code```
 Lista um produto cadastrado cujo código corresponde ao passado como parâmetro. Exemplo: ```GET /products/8718215180180```   
