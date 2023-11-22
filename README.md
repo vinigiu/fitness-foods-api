@@ -17,13 +17,13 @@ Para obter mais informações sobre o desafio, consulte [Desafio-Coodesh](https:
 
 ## Stack utilizada:
 
-- Linguagem: Typescript
-- Servidor: NodeJs com framework Express
-- Banco de dados (NoSQL): MongoDB com Atlas
-- Agendador de tarefas automáticas: NodeCron
-- Versionamento de código: Git
-- Repositório de código: GitHub
-- Containerização: Docker
+- Linguagem: `Typescript`
+- Servidor: `NodeJs com framework Express`
+- Banco de dados (NoSQL): `MongoDB (Atlas)`
+- Agendador de tarefas automáticas: `NodeCron`
+- Versionamento de código: `Git`
+- Repositório de código: `GitHub`
+- Containerização: `Docker`
 
 ## Desenvolvido por:
 - [@vinigiu](https://github.com/vinigiu)
