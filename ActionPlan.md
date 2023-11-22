@@ -49,3 +49,7 @@
 - Passo 5: Foi criado o modulo de serviço do CronJob que irá realizar a busca dos dados na API da Open Food Facts. A princípio, foram criadas as funções das tarefas necessárias, sem que estas ainda realizem completamente seus objetivos, a título de verificação do funcionamento do Job. Para teste, o Job foi configurado para ocorrer a cada minuto. No entanto, quando as funções do Job foram ajustadas, a configuração foi alterada para que ocorra diariamente às 23h (horário em que, provavelmente, o tráfego da aplciação será mínimo)
 
 - Passo 6: Foram criados os arquivos Dockerfile e dokcer-compose.yml para configuração do Docker. Esta foi minha primeira experiência configurando um container Docker (minhas experiêcnias prévias com Docker envolveram apenas a montagem do container e imagem de um projeto já existente e previamente configurado), fazendo necessária a pesquisa em documentação para o entendimento de como realizar estas configurações.
+
+- Passo 7: Foi criado o arquivo fitness-foods-api.json contendo a documentação no formato OpenAPI 3.0.
+
+- Passo 8: Foi criado um diretório data contendo o arquivo apikeys.json para armazenar API Keys a serem validadas para authenticação dos requests. Para tal, todo request a qualquer endpoint da API deve conter um Authorization no Header, cujo valor deve coincidir com o key value de algum registro do arquivo apikeys.json.
