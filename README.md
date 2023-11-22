@@ -15,6 +15,29 @@ Para obter mais informações sobre o desafio, consulte [Desafio-Coodesh](https:
 - Crie uma instância do container Docker:
     > `docker compose up -d --build`
 
+## Endpoints
+
+### GET ```/products```
+Lista todos os produtos cadastrados no banco de dados. Inclui paginação com limite padrão de 10 produtos. Exemplo ```GET /products?limit=100&page=2```   
+#### Parametros
+limit - limite de produtos na resposta   
+page - paginação   
+
+### GET ```/products/:code```
+Lista um produto cadastrado cujo código corresponde ao passado como parâmetro. Exemplo: ```GET /products/8718215180180```   
+#### Parametros   
+code - código do produto a ser buscado. Possui 13 digitos.   
+
+### PUT ```/products/:code```
+Edita um produto cadastrado cujo código corresponde ao passado como parâmetro. Exemplo: ```PUT /products/8718215380313```   
+#### Parametros   
+code - código do produto a ser buscado. Possui 13 digitos. 
+
+### DELETE ```/products/:code```
+Exclui um produto cadastrado cujo código corresponde ao passado como parâmetro. Exemplo ```DELETE /products/8718215180173```   
+#### Parametros   
+code - código do produto a ser excluído. Possui 13 digitos. 
+
 ## Stack utilizada:
 
 - Linguagem: `Typescript`
