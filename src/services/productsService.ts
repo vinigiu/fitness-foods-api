@@ -15,8 +15,8 @@ const productService = {
     try {
       await client.connect();
 
-      const skip = (page - 1) * 100;
-      const limit = 100;
+      const skip = (page - 1) * 30;
+      const limit = 30;
   
       products = await collection.find({}).skip(skip).limit(limit).toArray();
   
