@@ -54,3 +54,5 @@
 - Passo 7: Foi criado o arquivo fitness-foods-api.json contendo a documentação no formato OpenAPI 3.0.
 
 - Passo 8: Foi criado um diretório data contendo o arquivo apikeys.json para armazenar API Keys a serem validadas para authenticação dos requests. Para tal, todo request a qualquer endpoint da API deve conter um Authorization no Header, cujo valor deve coincidir com o key value de algum registro do arquivo apikeys.json. Para que esta lógica seja implementada, foi criado um middleware global que captura o valor de Authorization no header e compara com os valores existentes em apikeys.json
+
+- Passo 9: Foram criados os testes unitários para os endpoints da API utilizando Jest. Os testes foram divididos em dois arquivos: app.test (contém os testes de endpoints relativos à aplicação em um geral) e products.test (contém testes relativos à produtos)

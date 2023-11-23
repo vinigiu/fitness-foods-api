@@ -2,11 +2,6 @@ import app from '../src/server/app';
 import request from "supertest";
 
 describe('Testes de Endpoints', () => {
-    it('Deve retorna detalhes da API', async () => {
-        const response = await request(app).get('/api/v1/').set('Authorization', '1hhoU5hOqpKxKbCZSlgaujHUfvvFHBQW4xxpPUcqhzSDPD6QdahCkBkXhZTjaqYt');
-        expect(response.statusCode).toBe(200);
-      });
-
     it('Deve retornar a lista de produtos paginada', async () => {
       const response = await request(app).get('/api/v1/products?page=1').set('Authorization', '1hhoU5hOqpKxKbCZSlgaujHUfvvFHBQW4xxpPUcqhzSDPD6QdahCkBkXhZTjaqYt');
       expect(response.statusCode).toBe(200);
