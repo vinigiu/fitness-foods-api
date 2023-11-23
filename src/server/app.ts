@@ -1,7 +1,7 @@
 import express from 'express';
 import connectDB from '../models/db';
 import { router } from '../routes';
-import '../modules/cronJobRetrieveData';
+import '../utils/cronJobRetrieveData';
 import apiKeyMiddleware from '../middlewares/apiKeyMiddleware';
 
 const app = express();
