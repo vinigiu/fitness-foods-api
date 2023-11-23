@@ -16,7 +16,10 @@ Para obter mais informações sobre o desafio, consulte [Desafio-Coodesh](https:
     ```
 - Copie o arquivo `.env.example` e nomeie como `.env`
 - Crie uma instância do container Docker:
-    > `docker compose up -d --build`
+   ```bash 
+   docker compose up -d --build
+   
+   ```
 
 ## Endpoints
 
