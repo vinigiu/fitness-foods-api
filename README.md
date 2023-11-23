@@ -13,7 +13,6 @@ Para obter mais informações sobre o desafio, consulte [Desafio-Coodesh](https:
 - Abra um terminal dentro do diretório e execute o comando:
 ```bash 
 git clone https://github.com/vinigiu/fitness-foods-api.git
-    
 ```
 
 - Entre na paste do projeto e instale as dependências:
@@ -37,7 +36,6 @@ npm run test
 - Caso prefira rodar a aplicação em um container Docker, crie uma instância:
 ```bash 
 docker compose up -d --build
-   
 ```
 
 ## Endpoints
