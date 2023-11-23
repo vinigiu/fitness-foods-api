@@ -9,17 +9,36 @@ Para obter mais informações sobre o desafio, consulte [Desafio-Coodesh](https:
 
 ## Como iniciar a API
 - Crie um diretório em sua máquina para armazenar o código
+
 - Abra um terminal dentro do diretório e execute o comando:
-    ```bash 
-    git clone https://github.com/vinigiu/fitness-foods-api.git
+```bash 
+git clone https://github.com/vinigiu/fitness-foods-api.git
     
-    ```
+```
+
+- Entre na paste do projeto e instale as dependências:
+```bash
+cd fitness_foods-api
+npm install
+```
+
 - Copie o arquivo `.env.example` e nomeie como `.env`
-- Crie uma instância do container Docker:
-   ```bash 
-   docker compose up -d --build
+
+- Para iniciar o servidor da API:
+```bash
+npm run start
+```
+
+- Para rodar os testes, basta executar o seguinte comando:
+```bash
+npm run test
+```
+
+- Caso prefira rodar a aplicação em um container Docker, crie uma instância:
+```bash 
+docker compose up -d --build
    
-   ```
+```
 
 ## Endpoints
 
