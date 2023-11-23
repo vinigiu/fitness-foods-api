@@ -26,7 +26,7 @@
     - `GET /products/:code`: Obter a informação somente de um produto da base de dados
     - `GET /products`: Listar todos os produtos da base de dados, adicionar sistema de paginação para não sobrecarregar o `REQUEST`.
 - [X] Criação dos Controllers e Services para realização de cada operação CRUD
-- [ ] Criação dos Unit Tests
+- [X] Criação dos Unit Tests
 - [X] Criação do esquema de segurança utilizando `API KEY`
 - [X] Criação do Cron Job
 - [ ] Configuração do Cron Job para obter os dados da API do Open Foods e tratar para inserir no DB
