@@ -1,7 +1,7 @@
 import { MongoClient } from 'mongodb';
-import ImportObject from '../interfaces/ImportObject';
+import { ImportObject } from '../interfaces/ImportObject';
 
-export default async function saveImportInfo(
+export async function saveImportInfo(
     importObj: ImportObject,
     dbName: string,
 ) {

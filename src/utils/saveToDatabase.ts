@@ -2,7 +2,7 @@ import fs from 'fs';
 import { MongoClient } from 'mongodb';
 import { Product } from '../interfaces/Product';
 
-export default async function saveToMongoDB(
+export async function saveToMongoDB(
     filePath: string, 
     dbName: string, 
     collectionName: string
@@ -48,8 +48,4 @@ export default async function saveToMongoDB(
     } finally {
       await client.close();
     }
-}
-
-async function saveImportInfo() {
-
 }

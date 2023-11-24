@@ -1,9 +1,9 @@
 import fs from 'fs';
 import path from 'path';
 import readline from 'readline';
-import downloadFile from './downloadFile';
+import { downloadFile } from './downloadFile';
 
-export default async function processIndexFile() {
+export async function processIndexFile() {
   const indexFilePath = path.join(process.cwd(), 'tmp', 'index.txt');
   const baseURL = 'https://challenges.coode.sh/food/data/json/';
 

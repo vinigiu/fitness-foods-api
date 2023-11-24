@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-export default async function cleanTmp() {
+export async function cleanTmp() {
   const tmpDir = path.join(process.cwd(), 'tmp');
 
   try {
