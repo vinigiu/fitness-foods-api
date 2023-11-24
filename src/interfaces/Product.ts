@@ -1,8 +1,6 @@
 export interface Product {
   id: string;
   code: number;
-  status: string;
-  imported_t: string;
   url: string;
   creator: string;
   created_t: number;

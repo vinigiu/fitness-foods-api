@@ -29,7 +29,7 @@
 - [X] Criação dos Unit Tests
 - [X] Criação do esquema de segurança utilizando `API KEY`
 - [X] Criação do Cron Job
-- [ ] Configuração do Cron Job para obter os dados da API do Open Foods e tratar para inserir no DB
+- [X] Configuração do Cron Job para obter os dados da API do Open Foods e tratar para inserir no DB
 - [X] Criação da documentação seguindo o conceito Open API 3.0 disponível em: [fitness-foods-api.json](https://github.com/vinigiu/fitness-foods-api/blob/master/fitness-foods-api.json)
 
 ## Configuração do Docker
@@ -56,3 +56,7 @@
 - Passo 8: Foi criado um diretório data contendo o arquivo apikeys.json para armazenar API Keys a serem validadas para authenticação dos requests. Para tal, todo request a qualquer endpoint da API deve conter um Authorization no Header, cujo valor deve coincidir com o key value de algum registro do arquivo apikeys.json. Para que esta lógica seja implementada, foi criado um middleware global que captura o valor de Authorization no header e compara com os valores existentes em apikeys.json
 
 - Passo 9: Foram criados os testes unitários para os endpoints da API utilizando Jest. Os testes foram divididos em dois arquivos: app.test (contém os testes de endpoints relativos à aplicação em um geral) e products.test (contém testes relativos à produtos)
+
+- Passo 10: Foram criadas as funções utils para Download de arquivos, processamento do arquivo index.txt que possui os nomes dos arquivos a serem baixados para atualização do database, iterar sobre os arquivos e obter os produtos adicionando-os ao database (atualizando-os caso já existam), e limpeza do diretório acessório criado no processo, bem como os arquivos baixados neste processo.
+
+- Passo 11: Foram incluídas no arquivo do CronJob as funções utils criadas anteriormente para que realizem as ações determinadas todos os dias as 23h. 
