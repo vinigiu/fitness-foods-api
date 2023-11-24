@@ -59,4 +59,6 @@
 
 - Passo 10: Foram criadas as funções utils para Download de arquivos, processamento do arquivo index.txt que possui os nomes dos arquivos a serem baixados para atualização do database, iterar sobre os arquivos e obter os produtos adicionando-os ao database (atualizando-os caso já existam), e limpeza do diretório acessório criado no processo, bem como os arquivos baixados neste processo.
 
-- Passo 11: Foram incluídas no arquivo do CronJob as funções utils criadas anteriormente para que realizem as ações determinadas todos os dias as 23h. 
+- Passo 11: Foram incluídas no arquivo do CronJob as funções utils criadas anteriormente para que realizem as ações determinadas todos os dias as 23h.
+
+- Passo 12: Após diversos problemas com NodeCron, stack foi substituída por Cron for Node.js

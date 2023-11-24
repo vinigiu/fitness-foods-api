@@ -67,7 +67,7 @@ code - código do produto a ser excluído. Possui 8 digitos.
 - Linguagem: `Typescript`
 - Servidor: `NodeJs com framework Express`
 - Banco de dados (NoSQL): `MongoDB (Atlas)`
-- Agendador de tarefas automáticas: `NodeCron`
+- Agendador de tarefas automáticas: `Cron for Node.js`
 - Versionamento de código: `Git`
 - Repositório de código: `GitHub`
 - Containerização: `Docker`
