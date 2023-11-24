@@ -1,4 +1,6 @@
 require('dotenv').config();
+import path from 'path';
+import fs from 'fs';
 import { downloadFile } from './downloadFile';
 import { saveToMongoDB } from './saveToDatabase';
 import { saveImportInfo } from './saveImportToDb';
