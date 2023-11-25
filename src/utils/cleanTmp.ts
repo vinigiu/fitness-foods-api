@@ -1,32 +1,24 @@
 import fs from 'fs';
 import path from 'path';
 
-export async function cleanTmp() {
-  const tmpDir = path.join(process.cwd(), 'tmp');
-
+export function cleanTmp() {
+  const tmpDir = path.join(process.cwd(), 'temp');
+  console.log("Entrei no cleanTemp!")
   try {
-    await removeDir(tmpDir);
-    console.log('Pasta tmp excluída com sucesso.');
+    removeDir(tmpDir);
+    console.log('conteúdo da pasta temp excluída com sucesso.');
   } catch (error) {
-    console.error('Erro ao excluir a pasta tmp:', error.message);
+    console.error('Erro ao excluir a conteúdo da pasta temp:', error.message);
     throw error;
   }
 }
 
-async function removeDir(dir: string) {
+function removeDir(dir: string) {
     const entries = fs.readdirSync(dir);
   
     for (const entry of entries) {
       const entryPath = path.join(dir, entry);
-  
-      const isDirectory = fs.statSync(entryPath).isDirectory();
-  
-      if (isDirectory) {
-        await removeDir(entryPath);
-      } else {
-        fs.unlinkSync(entryPath);
-      }
+      
+      fs.unlinkSync(entryPath);
     }
-  
-    fs.rmdirSync(dir);
   }

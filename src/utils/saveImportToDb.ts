@@ -10,7 +10,7 @@ export async function saveImportInfo(
     try {
         await client.connect();
         const database = client.db(dbName);
-        inserted = database.collection('imports').insertOne(importObj);
+        inserted = await database.collection('imports').insertOne(importObj);
     } catch (error) {
         console.error('Erro ao salvar imports no MongoDB')
     } finally {

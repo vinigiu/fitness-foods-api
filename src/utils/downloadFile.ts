@@ -4,7 +4,7 @@ import path from 'path';
 import zlib from 'zlib';
 
 export async function downloadFile(baseUrl: string, fileName: string) {
-  const saveDirectory = path.join(process.cwd(), 'tmp');
+  const saveDirectory = path.join(process.cwd(), 'temp');
 
   try {
     if (!fs.existsSync(saveDirectory)) {

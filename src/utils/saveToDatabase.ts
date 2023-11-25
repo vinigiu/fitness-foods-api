@@ -1,8 +1,9 @@
 import fs from 'fs';
 import { MongoClient } from 'mongodb';
 import { Product } from '../interfaces/Product';
+import { get100ProductsFromFile } from './getProductsFromFile';
 
-export async function saveToMongoDB(
+export async function saveToDatabase(
     filePath: string, 
     dbName: string, 
     collectionName: string
@@ -14,14 +15,7 @@ export async function saveToMongoDB(
       const database = client.db(dbName);
       const collection = database.collection(collectionName);
   
-      const fileContent = fs.readFileSync(filePath, 'utf-8');
-      const jsonData = JSON.parse(fileContent);
-  
-      const itemsToInsert = jsonData.slice(0, 100).map((item: any) => ({
-        ...item,
-        status: 'published',
-        imported_t: new Date().toISOString(),
-      }));
+      const itemsToInsert = await get100ProductsFromFile(filePath);
 
       if (itemsToInsert.length > 0) {
         for (const item of itemsToInsert) {
