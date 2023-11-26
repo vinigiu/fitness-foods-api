@@ -1,6 +1,5 @@
 require('dotenv').config();
 import { MongoClient } from 'mongodb';
-import { dbStatus } from '../models/db';
 
 const client = new MongoClient(process.env.MONGODB_URI);
 
@@ -20,23 +19,25 @@ const apiServices = {
         const formattedUptime = `${formattedHours}h ${formattedMinutes}m ${formattedSeconds}s`;
 
         let info = {
-            dbStatus,
+            dbStatus: '',
             usedMemory: used,
             onlineTime: formattedUptime,
         };
 
         try {
             await client.connect();
+
+            info.dbStatus = 'Conexão com o banco de dados: OK';
         
-            const imp = await collection.findOne({ sort: { imported_t: -1 } });
+            const imp = await collection.findOne({}, { sort: { imported_t: -1 } });
 
             if (imp) {
                 Object.assign(info, {
-                    lastImport: imp,
+                    lastImport: imp.imported_t,
                 })
             }
-        
-            console.log("import: ", imp);
+        } catch (error) {
+            info.dbStatus = `Conexão com o banco de dados: ERRO - ${error}`;
         } finally {
             await client.close();
             return info;

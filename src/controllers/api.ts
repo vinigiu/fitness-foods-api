@@ -3,9 +3,9 @@ import { Request, Response } from "express";
 import apiServices from "../services/apiSercives";
 
 const apiController = {
-  getApi: (req: Request, res: Response) => {
+  getApi: async (req: Request, res: Response) => {
 
-    const info = apiServices.getApiInfo();
+    const info = await apiServices.getApiInfo();
 
     res.status(200).send(info);
   }
