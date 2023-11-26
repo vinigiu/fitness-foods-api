@@ -23,6 +23,13 @@ npm install
 
 - Copie o arquivo `.env.example` e nomeie como `.env`
 
+- Utilize o comando para realizar o build Typescript:
+```bash
+npm run build
+```
+
+- Copie a pasta `\src\data` dentro de `\dist\src\data`
+
 - Para iniciar o servidor da API:
 ```bash
 npm run start
