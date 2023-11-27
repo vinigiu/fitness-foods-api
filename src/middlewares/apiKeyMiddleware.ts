@@ -1,32 +1,41 @@
 import { Request, Response, NextFunction } from "express";
-import Path from "path";
+import { MongoClient, WithId } from "mongodb";
 
-interface ApiKey {
+interface ApiKey extends WithId<Document> {
   key: string;
 }
 
-const apiKeyFile = Path.join(__dirname, '..', '..', 'src', 'data', 'apikeys.json');
-
-const apiKeys: ApiKey[] = require(apiKeyFile);
-
-const apiKeyMiddleware = (req: Request, res: Response, next: NextFunction) => {
-  const apiKey = req.headers.authorization || "";
-
-  if (!apiKey) {
-    res.status(401).send("Unauthorized");
-    return;
+const apiKeyMiddleware = async (req: Request, res: Response, next: NextFunction) => {
+  const headerApiKey = req.headers.authorization || "";
+  const client = new MongoClient(process.env.MONGODB_URI);
+  const database = client.db('fitness-foods');
+  const collection = database.collection('keys');
+  
+  try {
+  
+    if (!headerApiKey) {
+      res.status(401).send("Unauthorized");
+      return;
+    }
+  
+    const apiKeys = await collection.find().toArray();
+  
+  
+    const validApiKey = apiKeys.find(
+      (apiKeyObj: ApiKey) => apiKeyObj.key === headerApiKey
+    );
+  
+    if (!validApiKey) {
+      res.status(401).send("Unauthorized");
+      return;
+    }
+  
+    next();
+  } catch (error) {
+    console.log('Erro na validação da ApiKey - ', error)
+  } finally {
+    client.close();
   }
-
-  const validApiKey = apiKeys.find(
-    (apiKeyObj: ApiKey) => apiKeyObj.key === apiKey
-  );
-
-  if (!validApiKey) {
-    res.status(401).send("Unauthorized");
-    return;
-  }
-
-  next();
 };
 
 export default apiKeyMiddleware;

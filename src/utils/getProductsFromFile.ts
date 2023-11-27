@@ -16,8 +16,9 @@ export async function get100ProductsFromFile(filePath: string): Promise<any[]> {
         products.push(JSON.parse(obj));
       } else {
         for (let i = 0; i < products.length; i++) {
-            products[i].imported_t = new Date().toISOString(),
-            products[i].status = "published"
+          products[i].code = products[i].code.replace(/\D/g, '');
+          products[i].imported_t = new Date().toISOString(),
+          products[i].status = "published"
         }
         rl.close();
         rl.removeAllListeners();

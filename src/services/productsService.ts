@@ -32,20 +32,17 @@ const productService = {
     await client.connect();
     
     let product;
-
-    let codeToNumber = Number(code);
     
     try {
       await client.connect();
 
       console.log(code)
   
-      product = await collection.findOne({ code: codeToNumber });
+      product = await collection.findOne({ code });
   
       if (!product) {
         return { erro: 'It was not possible to find product with this code'};
       }
-      console.log('Product found:', product);
     } finally {
       await client.close();
 
