@@ -28,8 +28,6 @@ npm install
 npm run build
 ```
 
-- Copie a pasta `\src\data` dentro de `\dist\src\data`
-
 - Para iniciar o servidor da API:
 ```bash
 npm run start
