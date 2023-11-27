@@ -47,6 +47,9 @@ docker compose up -d --build
 
 > Para que as requisições aos endpoints seja autorizadas é necessário incluir no Header da requisição uma API Key válida em Authorizations. Para finalidade de teste, você pode obter o valor de uma API Key válida em `src\data\apikeys.json`
 
+### GET ```/```
+ Detalhes da API, se conexão leitura e escritura com a base de dados está OK, horário da última vez que o CRON foi executado, tempo online e uso de memória. 
+
 ### GET ```/products```
 Lista todos os produtos cadastrados no banco de dados. Inclui paginação com limite 100 produtos por página. Exemplo ```GET /products?page=1```   
 #### Parâmetros 
