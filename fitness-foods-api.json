@@ -13,7 +13,23 @@
         "get": {
           "description": "Detalhes da API, se conexão leitura e escritura com a base de dados está OK, horário da última vez que o CRON foi executado, tempo online e uso de memória.",
           "responses": {
-
+            "200": {
+              "description": "OK",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Api"
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "Unauthorized",
+              "content": "Unauthorized"
+            },
+            "404": {
+              "description": "Not Found"
+            }
           } 
         }
       },
