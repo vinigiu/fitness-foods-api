@@ -9,6 +9,14 @@
       }
     },
     "paths": {
+      "/": {
+        "get": {
+          "description": "Detalhes da API, se conexão leitura e escritura com a base de dados está OK, horário da última vez que o CRON foi executado, tempo online e uso de memória.",
+          "responses": {
+
+          } 
+        }
+      },
       "/products": {
         "get": {
           "description": "Lista todos os produtos cadastrados no banco de dados. Inclui paginação com limite 100 produtos por página.",
@@ -232,6 +240,48 @@
             "image_url": {
               "type": "string",
               "description": "URL of the product's image"
+            }
+          }
+        },
+        "Api": {
+          "type": "object",
+          "properties": {
+            "dbStatus": {
+              "type": "string",
+              "description": "Indicates if database conection is ok"
+            },
+            "usedMemory": {
+              "type": "object",
+              "properties": {
+                "rss": {
+                  "type": "integer",
+                  "description": "How much memory is used on rss"
+                },
+                "heapTotal": {
+                  "type": "integer",
+                  "description": "How much memory is on heapTotal"
+                },
+                "heapUsed": {
+                  "type": "integer",
+                  "description": "How much memory is used on heapUsed"
+                },
+                "external": {
+                  "type": "integer",
+                  "description": "How much memory is used on external"
+                },
+                "arrayBuffers": {
+                  "type": "integer",
+                  "description": "How much memory is used on arrayBuffers"
+                }
+              }
+            },
+            "onlineTime": {
+              "type": "string",
+              "description": "Time that server is online"
+            },
+            "lastImport": {
+              "type": "string",
+              "description": "Date of the last import executed by Cron Job"
             }
           }
         }
